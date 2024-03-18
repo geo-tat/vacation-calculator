@@ -1,4 +1,4 @@
-package ru.neoflex.vacationcalculator;
+package ru.neoflex.vacationcalculator.exception;
 
 import jakarta.validation.ValidationException;
 import lombok.extern.slf4j.Slf4j;

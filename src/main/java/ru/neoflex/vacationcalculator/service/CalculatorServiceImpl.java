@@ -1,8 +1,9 @@
-package ru.neoflex.vacationcalculator;
+package ru.neoflex.vacationcalculator.service;
 
 
 import jakarta.validation.ValidationException;
 import org.springframework.stereotype.Service;
+import ru.neoflex.vacationcalculator.util.HolidayManager;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

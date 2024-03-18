@@ -1,4 +1,4 @@
-package ru.neoflex.vacationcalculator;
+package ru.neoflex.vacationcalculator.util;
 
 
 import lombok.Getter;
