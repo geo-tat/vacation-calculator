@@ -16,7 +16,7 @@ public class CalculatorServiceImpl implements CalculatorService {
     public double calculateVacationPay(double averageSalary, LocalDate vacationStart, int vacationDays) {
         validation(averageSalary, vacationDays, vacationStart);
         if (vacationStart == null) {
-            return Math.round(averageSalary / 29.3 * vacationDays * 100) / 100.0;
+            return Math.round(averageSalary / 12 / 29.3 * vacationDays * 100) / 100.0;
         }
         LocalDate vacationEnd = vacationStart.plusDays(vacationDays - 1);
         Set<LocalDate> holidays = HolidayManager.getHolidays();
@@ -28,7 +28,7 @@ public class CalculatorServiceImpl implements CalculatorService {
             }
             countDate = countDate.plusDays(1);
         }
-        return Math.round(averageSalary / 29.3 * workingDays * 100) / 100.0;
+        return Math.round(averageSalary / 12 / 29.3 * workingDays * 100) / 100.0;
     }
 
     private static void validation(Double averageSalary, Integer vacationDays, LocalDate vacationStart) {
