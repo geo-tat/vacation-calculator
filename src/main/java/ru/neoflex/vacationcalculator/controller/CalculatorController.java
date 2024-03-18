@@ -17,8 +17,8 @@ public class CalculatorController {
 
     @GetMapping("/calculate")
     public double calculateVacation(@RequestParam double averageSalary,
-                                    @RequestParam  @NotNull @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate vacationStart,
+                                    @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate vacationStart,
                                     @RequestParam int vacationDays) {
-        return service.calculateVacationPay(averageSalary,vacationStart,vacationDays);
+        return service.calculateVacationPay(averageSalary, vacationStart, vacationDays);
     }
 }

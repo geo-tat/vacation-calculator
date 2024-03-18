@@ -14,7 +14,7 @@ public class ErrorHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler
     public ErrorResponse handleValidationException(final ValidationException e) {
-        log.error("Ошибка входящих данных",e);
+        log.error("Ошибка входящих данных", e);
         return new ErrorResponse(e.getMessage());
     }
 }
